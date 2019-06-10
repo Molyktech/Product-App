@@ -11,9 +11,8 @@ Just clone the repo or download the zip file
 Would update as i build, run the command to start the server though
 
 ```bash
- node app
- nodemon app
- npm start server
+
+ npm run dev
 ```
 
 ## Contributing
