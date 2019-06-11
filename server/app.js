@@ -5,6 +5,8 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
 
+const product = require("./api/productRoute");
+
 const app = express();
 
 app.use(logger("dev"));
@@ -18,6 +20,9 @@ app.get("/", (req, res) => {
     message: "Hello World"
   });
 });
+
+app.use("/api/v1/products", product);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
